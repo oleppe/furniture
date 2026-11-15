@@ -1,0 +1,762 @@
+{
+  "communities": {
+    "0": [
+      "admin_dashboard_route",
+      "admin_providercontroller_providercontroller",
+      "admin_providercontroller_providercontroller_index",
+      "ai_model",
+      "ai_model_controller",
+      "ai_model_factory",
+      "app_http_controllers_admin_providercontroller_php",
+      "app_services_catalogpricingfetcherservice_php",
+      "auth_controller",
+      "base_controller",
+      "base_factory",
+      "benchmark_arabic",
+      "benchmark_arabic_factory",
+      "benchmark_general",
+      "benchmark_general_factory",
+      "cache_lock",
+      "catalog_pricing_fetcher_service",
+      "catalog_sync_controller",
+      "config_cache",
+      "config_database",
+      "config_logging",
+      "config_queue",
+      "config_session",
+      "dashboard_controller",
+      "database_factories_aimodelfactory_php",
+      "database_factories_modelofferingfactory_php",
+      "database_factories_providerfactory_php",
+      "factories_aimodelfactory_aimodelfactory",
+      "factories_aimodelfactory_aimodelfactory_definition",
+      "factories_modelofferingfactory_modelofferingfactory",
+      "factories_modelofferingfactory_modelofferingfactory_definition",
+      "factories_providerfactory_providerfactory",
+      "factories_providerfactory_providerfactory_definition",
+      "fetch_catalog_and_prices",
+      "known_providers_map",
+      "litellm_prices_json",
+      "model_offering",
+      "model_offering_factory",
+      "model_spec",
+      "model_spec_factory",
+      "openrouter_models_api",
+      "provider",
+      "provider_controller",
+      "provider_factory",
+      "provider_model",
+      "prune_invalid_duplicate_models",
+      "speed_telemetry",
+      "speed_telemetry_factory",
+      "sync_catalog",
+      "user_controller",
+      "user_model"
+    ],
+    "1": [
+      "command_catalog_fetch_prices",
+      "concept_admin_portal",
+      "concept_arabic_efficiency",
+      "concept_capabilities",
+      "concept_curation_flags",
+      "concept_model_offering",
+      "concept_openrouter_api",
+      "concept_pricing_matrix",
+      "doc_context",
+      "doc_model_json_schema",
+      "doc_roadmap",
+      "external_litellm_api",
+      "external_openrouter_api",
+      "migration_add_curation_flags",
+      "migration_add_openrouter_fields",
+      "migration_create_benchmarks_arabic",
+      "migration_create_benchmarks_general",
+      "migration_create_model_offerings",
+      "migration_create_model_specs",
+      "migration_create_models",
+      "migration_create_providers",
+      "migration_create_speed_telemetry",
+      "model_ai_model",
+      "model_benchmark_arabic",
+      "model_benchmark_general",
+      "model_model_offering",
+      "model_model_spec",
+      "model_provider",
+      "model_speed_telemetry",
+      "robots_txt",
+      "seeder_ai_platform",
+      "service_catalog_pricing_fetcher",
+      "table_benchmarks_arabic",
+      "table_benchmarks_general",
+      "table_model_offerings",
+      "table_model_specs",
+      "table_models",
+      "table_providers",
+      "table_speed_telemetry",
+      "test_admin_panel",
+      "test_ai_platform_database",
+      "test_case",
+      "test_catalog_pricing_fetcher",
+      "test_example_feature",
+      "view_admin_dashboard",
+      "view_admin_models_index",
+      "view_admin_models_show",
+      "view_admin_providers_index",
+      "view_admin_users_index",
+      "view_layout_admin"
+    ],
+    "2": [
+      "composer_json",
+      "furniture_composer_allow_plugins_pestphp_pest_plugin",
+      "furniture_composer_allow_plugins_php_http_discovery",
+      "furniture_composer_autoload",
+      "furniture_composer_autoload_dev",
+      "furniture_composer_autoload_dev_psr_4",
+      "furniture_composer_autoload_psr_4",
+      "furniture_composer_config",
+      "furniture_composer_config_allow_plugins",
+      "furniture_composer_config_optimize_autoloader",
+      "furniture_composer_config_preferred_install",
+      "furniture_composer_config_sort_packages",
+      "furniture_composer_description",
+      "furniture_composer_extra",
+      "furniture_composer_extra_laravel",
+      "furniture_composer_keywords",
+      "furniture_composer_laravel_dont_discover",
+      "furniture_composer_license",
+      "furniture_composer_minimum_stability",
+      "furniture_composer_name",
+      "furniture_composer_prefer_stable",
+      "furniture_composer_psr_4_app",
+      "furniture_composer_psr_4_database_factories",
+      "furniture_composer_psr_4_database_seeders",
+      "furniture_composer_psr_4_tests",
+      "furniture_composer_require",
+      "furniture_composer_require_dev",
+      "furniture_composer_require_dev_fakerphp_faker",
+      "furniture_composer_require_dev_laravel_boost",
+      "furniture_composer_require_dev_laravel_pail",
+      "furniture_composer_require_dev_laravel_pao",
+      "furniture_composer_require_dev_laravel_pint",
+      "furniture_composer_require_dev_mockery_mockery",
+      "furniture_composer_require_dev_nunomaduro_collision",
+      "furniture_composer_require_dev_phpunit_phpunit",
+      "furniture_composer_require_laravel_framework",
+      "furniture_composer_require_laravel_tinker",
+      "furniture_composer_require_php",
+      "furniture_composer_schema",
+      "furniture_composer_type",
+      "pkg_laravel_framework",
+      "pkg_laravel_pint",
+      "pkg_phpunit"
+    ],
+    "3": [
+      "admin_dashboardcontroller_dashboardcontroller",
+      "admin_dashboardcontroller_dashboardcontroller_index",
+      "admin_usercontroller_usercontroller",
+      "admin_usercontroller_usercontroller_destroy",
+      "admin_usercontroller_usercontroller_index",
+      "admin_usercontroller_usercontroller_store",
+      "admin_usercontroller_usercontroller_update",
+      "app_http_controllers_admin_dashboardcontroller_php",
+      "app_http_controllers_admin_usercontroller_php",
+      "app_models_user_php",
+      "config_auth_php",
+      "database_factories_userfactory_php",
+      "database_seeders_adminuserseeder_php",
+      "database_seeders_databaseseeder_php",
+      "factories_userfactory_userfactory",
+      "factories_userfactory_userfactory_definition",
+      "factories_userfactory_userfactory_unverified",
+      "feature_adminpaneltest_adminpaneltest",
+      "feature_adminpaneltest_adminpaneltest_setup",
+      "feature_adminpaneltest_adminpaneltest_test_admin_can_create_new_user",
+      "feature_adminpaneltest_adminpaneltest_test_admin_can_delete_another_user",
+      "feature_adminpaneltest_adminpaneltest_test_admin_can_fetch_comprehensive_model_offerings_and_properties",
+      "feature_adminpaneltest_adminpaneltest_test_admin_can_login_with_specified_credentials",
+      "feature_adminpaneltest_adminpaneltest_test_admin_can_toggle_model_active_and_featured",
+      "feature_adminpaneltest_adminpaneltest_test_admin_can_update_existing_user",
+      "feature_adminpaneltest_adminpaneltest_test_admin_can_view_model_profile_show_page",
+      "feature_adminpaneltest_adminpaneltest_test_admin_can_view_models_and_filter",
+      "feature_adminpaneltest_adminpaneltest_test_admin_cannot_delete_themselves",
+      "feature_adminpaneltest_adminpaneltest_test_admin_cannot_demote_themselves",
+      "feature_adminpaneltest_adminpaneltest_test_admin_portal_and_login_include_theme_toggle",
+      "feature_adminpaneltest_adminpaneltest_test_guest_is_redirected_to_admin_login",
+      "feature_adminpaneltest_adminpaneltest_test_non_admin_user_cannot_access_admin_portal",
+      "feature_adminpaneltest_adminpaneltest_test_root_url_redirects_to_admin",
+      "models_user_user",
+      "models_user_user_casts",
+      "models_user_user_isadmin",
+      "seeders_adminuserseeder_adminuserseeder",
+      "seeders_adminuserseeder_adminuserseeder_run",
+      "seeders_databaseseeder_databaseseeder",
+      "seeders_databaseseeder_databaseseeder_run",
+      "tests_feature_adminpaneltest_php",
+      "user",
+      "user_factory"
+    ],
+    "4": [
+      "app_models_modeloffering_php",
+      "app_models_modelspec_php",
+      "app_models_speedtelemetry_php",
+      "feature_aiplatformdatabasetest_aiplatformdatabasetest",
+      "feature_aiplatformdatabasetest_aiplatformdatabasetest_test_can_create_model_offerings_and_query_relationships_and_scopes",
+      "feature_aiplatformdatabasetest_aiplatformdatabasetest_test_can_create_model_specs_and_retrieve_via_relationship",
+      "feature_aiplatformdatabasetest_aiplatformdatabasetest_test_can_create_provider_with_models",
+      "feature_aiplatformdatabasetest_aiplatformdatabasetest_test_can_record_arabic_benchmarks",
+      "feature_aiplatformdatabasetest_aiplatformdatabasetest_test_can_record_general_benchmarks",
+      "feature_aiplatformdatabasetest_aiplatformdatabasetest_test_can_record_speed_telemetry",
+      "feature_aiplatformdatabasetest_aiplatformdatabasetest_test_cascade_delete_removes_associated_model_records",
+      "models_modeloffering_modeloffering",
+      "models_modeloffering_modeloffering_aimodel",
+      "models_modeloffering_modeloffering_casts",
+      "models_modeloffering_modeloffering_provider",
+      "models_modeloffering_modeloffering_scopeaggregator",
+      "models_modeloffering_modeloffering_scopecheapest",
+      "models_modeloffering_modeloffering_scopedirect",
+      "models_modeloffering_modeloffering_scopeenterprisecloud",
+      "models_modeloffering_modeloffering_scopefastinference",
+      "models_modeloffering_modeloffering_scopeofficialdirect",
+      "models_modelspec_modelspec",
+      "models_modelspec_modelspec_aimodel",
+      "models_modelspec_modelspec_casts",
+      "models_speedtelemetry_speedtelemetry",
+      "models_speedtelemetry_speedtelemetry_aimodel",
+      "models_speedtelemetry_speedtelemetry_casts",
+      "tests_feature_aiplatformdatabasetest_php"
+    ],
+    "5": [
+      "artisan",
+      "boost_json",
+      "cmd_boost_mcp",
+      "furniture_boost_agents",
+      "furniture_boost_cloud",
+      "furniture_boost_guidelines",
+      "furniture_boost_mcp",
+      "furniture_boost_nightwatch",
+      "furniture_boost_sail",
+      "furniture_boost_skills",
+      "furniture_mcp_laravel_boost_args",
+      "furniture_mcp_laravel_boost_command",
+      "furniture_mcp_mcpservers",
+      "furniture_mcp_mcpservers_laravel_boost",
+      "furniture_opencode_laravel_boost_command",
+      "furniture_opencode_laravel_boost_enabled",
+      "furniture_opencode_laravel_boost_type",
+      "furniture_opencode_mcp",
+      "furniture_opencode_mcp_laravel_boost",
+      "furniture_opencode_schema",
+      "mcp_json",
+      "opencode_json",
+      "pkg_laravel_boost",
+      "routes_console_php"
+    ],
+    "6": [
+      "furniture_package_dependencies",
+      "furniture_package_dependencies_alpinejs",
+      "furniture_package_devdependencies",
+      "furniture_package_devdependencies_concurrently",
+      "furniture_package_devdependencies_laravel_vite_plugin",
+      "furniture_package_devdependencies_tailwindcss",
+      "furniture_package_devdependencies_tailwindcss_vite",
+      "furniture_package_devdependencies_vite",
+      "furniture_package_optionaldependencies",
+      "furniture_package_optionaldependencies_laravel_multiplex",
+      "furniture_package_private",
+      "furniture_package_schema",
+      "furniture_package_scripts",
+      "furniture_package_scripts_build",
+      "furniture_package_scripts_dev",
+      "furniture_package_type",
+      "package_json",
+      "pkg_alpinejs",
+      "pkg_laravel_vite_plugin",
+      "pkg_tailwindcss",
+      "pkg_vite",
+      "vite_config"
+    ],
+    "7": [
+      "admin_login_route",
+      "admin_middleware",
+      "app_service_provider",
+      "boost_service_provider",
+      "bootstrap_app",
+      "bootstrap_providers",
+      "cmd_catalog_fetch_prices",
+      "cmd_inspire",
+      "ctrl_ai_model",
+      "ctrl_auth",
+      "ctrl_catalog_sync",
+      "ctrl_dashboard",
+      "ctrl_provider",
+      "ctrl_user",
+      "mcp_service_provider",
+      "packages_cache",
+      "routes_console",
+      "routes_web",
+      "service_provider",
+      "services_cache"
+    ],
+    "8": [
+      "adr_0001",
+      "adr_0002",
+      "concept_admin_middleware",
+      "concept_admin_role",
+      "concept_password_broker",
+      "concept_role_access",
+      "concept_web_guard",
+      "config_auth",
+      "doc_agents",
+      "doc_claude",
+      "migration_add_role_to_users",
+      "migration_create_users",
+      "model_user",
+      "seeder_admin_user",
+      "seeder_database",
+      "table_password_reset_tokens",
+      "table_sessions",
+      "table_users",
+      "view_admin_login"
+    ],
+    "9": [
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_buildlitellmindex",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_buildlitellmofferingsindex",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_cleanmodelname",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_determineisopensource",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_ensurearabicbenchmark",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_extractcapabilities",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_extractpricingandspecs",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_extractproviderslug",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_fetchlitellmmodels",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_fetchopenroutermodels",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_matchlitellmspec",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_normalizemodelslug",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_parsehostingendpoint",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_pruneinvalidduplicatemodels",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_resolvearchitecture",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_resolveorcreateprovider",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_synccatalog",
+      "services_catalogpricingfetcherservice_catalogpricingfetcherservice_syncofferingsformodel"
+    ],
+    "10": [
+      "app_models_aimodel_php",
+      "models_aimodel_aimodel",
+      "models_aimodel_aimodel_benchmarkarabic",
+      "models_aimodel_aimodel_benchmarkgeneral",
+      "models_aimodel_aimodel_casts",
+      "models_aimodel_aimodel_cheapestoffering",
+      "models_aimodel_aimodel_latestspec",
+      "models_aimodel_aimodel_latestspeed",
+      "models_aimodel_aimodel_offerings",
+      "models_aimodel_aimodel_officialoffering",
+      "models_aimodel_aimodel_provider",
+      "models_aimodel_aimodel_specs",
+      "models_aimodel_aimodel_speedtelemetries"
+    ],
+    "11": [
+      "feature_catalogpricingfetchertest_catalogpricingfetchertest",
+      "feature_catalogpricingfetchertest_catalogpricingfetchertest_test_artisan_command_executes_successfully_with_limit",
+      "feature_catalogpricingfetchertest_catalogpricingfetchertest_test_can_parse_hosting_endpoint_and_region",
+      "feature_catalogpricingfetchertest_catalogpricingfetchertest_test_can_sync_catalog_and_prices_with_mocked_apis",
+      "feature_catalogpricingfetchertest_catalogpricingfetchertest_test_can_sync_multi_provider_offerings_and_tiered_pricing",
+      "feature_catalogpricingfetchertest_catalogpricingfetchertest_test_claude_opus_5_5_unifies_all_providers_without_creating_fake_models",
+      "feature_catalogpricingfetchertest_catalogpricingfetchertest_test_normalize_model_slug_handles_various_formats",
+      "feature_catalogpricingfetchertest_catalogpricingfetchertest_test_prune_invalid_duplicate_models_removes_corrupted_bedrock_entries",
+      "tests_feature_catalogpricingfetchertest_php"
+    ],
+    "12": [
+      "furniture_composer_scripts",
+      "furniture_composer_scripts_dev",
+      "furniture_composer_scripts_post_autoload_dump",
+      "furniture_composer_scripts_post_create_project_cmd",
+      "furniture_composer_scripts_post_root_package_install",
+      "furniture_composer_scripts_post_update_cmd",
+      "furniture_composer_scripts_pre_package_uninstall",
+      "furniture_composer_scripts_setup",
+      "furniture_composer_scripts_test"
+    ],
+    "13": [
+      "admin_aimodelcontroller_aimodelcontroller",
+      "admin_aimodelcontroller_aimodelcontroller_index",
+      "admin_aimodelcontroller_aimodelcontroller_offerings",
+      "admin_aimodelcontroller_aimodelcontroller_show",
+      "admin_aimodelcontroller_aimodelcontroller_toggleactive",
+      "admin_aimodelcontroller_aimodelcontroller_togglefeatured",
+      "app_http_controllers_admin_aimodelcontroller_php"
+    ],
+    "14": [
+      "admin_authcontroller_authcontroller",
+      "admin_authcontroller_authcontroller_login",
+      "admin_authcontroller_authcontroller_logout",
+      "admin_authcontroller_authcontroller_showlogin",
+      "app_http_controllers_admin_authcontroller_php"
+    ],
+    "15": [
+      "app_models_benchmarkgeneral_php",
+      "models_benchmarkgeneral_benchmarkgeneral",
+      "models_benchmarkgeneral_benchmarkgeneral_aimodel",
+      "models_benchmarkgeneral_benchmarkgeneral_casts"
+    ],
+    "16": [
+      "app_providers_appserviceprovider_php",
+      "providers_appserviceprovider_appserviceprovider",
+      "providers_appserviceprovider_appserviceprovider_boot",
+      "providers_appserviceprovider_appserviceprovider_register"
+    ],
+    "17": [
+      "config_filesystems",
+      "disk_local",
+      "disk_public",
+      "disk_s3"
+    ],
+    "18": [
+      "app_models_benchmarkarabic_php",
+      "models_benchmarkarabic_benchmarkarabic",
+      "models_benchmarkarabic_benchmarkarabic_aimodel",
+      "models_benchmarkarabic_benchmarkarabic_casts"
+    ],
+    "19": [
+      "app_models_provider_php",
+      "models_provider_provider",
+      "models_provider_provider_models",
+      "models_provider_provider_offerings"
+    ],
+    "20": [
+      "migration_create_jobs",
+      "table_failed_jobs",
+      "table_job_batches",
+      "table_jobs"
+    ],
+    "21": [
+      "doc_readme",
+      "js_app",
+      "public_index",
+      "view_welcome"
+    ],
+    "22": [
+      "admin_catalogsynccontroller_catalogsynccontroller",
+      "admin_catalogsynccontroller_catalogsynccontroller_sync",
+      "app_http_controllers_admin_catalogsynccontroller_php"
+    ],
+    "23": [
+      "app_console_commands_fetchcatalogandprices_php",
+      "commands_fetchcatalogandprices_fetchcatalogandprices",
+      "commands_fetchcatalogandprices_fetchcatalogandprices_handle"
+    ],
+    "24": [
+      "database_factories_modelspecfactory_php",
+      "factories_modelspecfactory_modelspecfactory",
+      "factories_modelspecfactory_modelspecfactory_definition"
+    ],
+    "25": [
+      "database_migrations_0001_01_01_000000_create_users_table_php",
+      "migrations_0001_01_01_000000_create_users_table_down",
+      "migrations_0001_01_01_000000_create_users_table_up"
+    ],
+    "26": [
+      "database_migrations_0001_01_01_000001_create_cache_table_php",
+      "migrations_0001_01_01_000001_create_cache_table_down",
+      "migrations_0001_01_01_000001_create_cache_table_up"
+    ],
+    "27": [
+      "database_migrations_2026_09_24_101556_create_providers_table_php",
+      "migrations_2026_09_24_101556_create_providers_table_down",
+      "migrations_2026_09_24_101556_create_providers_table_up"
+    ],
+    "28": [
+      "database_migrations_2026_09_24_101559_create_benchmarks_general_table_php",
+      "migrations_2026_09_24_101559_create_benchmarks_general_table_down",
+      "migrations_2026_09_24_101559_create_benchmarks_general_table_up"
+    ],
+    "29": [
+      "database_migrations_2026_09_24_101601_create_speed_telemetry_table_php",
+      "migrations_2026_09_24_101601_create_speed_telemetry_table_down",
+      "migrations_2026_09_24_101601_create_speed_telemetry_table_up"
+    ],
+    "30": [
+      "database_migrations_2026_09_24_150500_add_role_to_users_table_php",
+      "migrations_2026_09_24_150500_add_role_to_users_table_down",
+      "migrations_2026_09_24_150500_add_role_to_users_table_up"
+    ],
+    "31": [
+      "database_migrations_2026_09_24_150501_add_curation_flags_to_models_table_php",
+      "migrations_2026_09_24_150501_add_curation_flags_to_models_table_down",
+      "migrations_2026_09_24_150501_add_curation_flags_to_models_table_up"
+    ],
+    "32": [
+      "database_seeders_aiplatformseeder_php",
+      "seeders_aiplatformseeder_aiplatformseeder",
+      "seeders_aiplatformseeder_aiplatformseeder_run"
+    ],
+    "33": [
+      "database_factories_benchmarkarabicfactory_php",
+      "factories_benchmarkarabicfactory_benchmarkarabicfactory",
+      "factories_benchmarkarabicfactory_benchmarkarabicfactory_definition"
+    ],
+    "34": [
+      "database_factories_benchmarkgeneralfactory_php",
+      "factories_benchmarkgeneralfactory_benchmarkgeneralfactory",
+      "factories_benchmarkgeneralfactory_benchmarkgeneralfactory_definition"
+    ],
+    "35": [
+      "database_factories_speedtelemetryfactory_php",
+      "factories_speedtelemetryfactory_speedtelemetryfactory",
+      "factories_speedtelemetryfactory_speedtelemetryfactory_definition"
+    ],
+    "36": [
+      "feature_exampletest_exampletest",
+      "feature_exampletest_exampletest_test_the_application_returns_a_successful_response",
+      "tests_feature_exampletest_php"
+    ],
+    "37": [
+      "app_http_middleware_adminmiddleware_php",
+      "middleware_adminmiddleware_adminmiddleware",
+      "middleware_adminmiddleware_adminmiddleware_handle"
+    ],
+    "38": [
+      "migration_create_cache",
+      "table_cache",
+      "table_cache_locks"
+    ],
+    "39": [
+      "database_migrations_0001_01_01_000002_create_jobs_table_php",
+      "migrations_0001_01_01_000002_create_jobs_table_down",
+      "migrations_0001_01_01_000002_create_jobs_table_up"
+    ],
+    "40": [
+      "database_migrations_2026_09_24_101557_create_models_table_php",
+      "migrations_2026_09_24_101557_create_models_table_down",
+      "migrations_2026_09_24_101557_create_models_table_up"
+    ],
+    "41": [
+      "database_migrations_2026_09_24_101558_create_model_specs_table_php",
+      "migrations_2026_09_24_101558_create_model_specs_table_down",
+      "migrations_2026_09_24_101558_create_model_specs_table_up"
+    ],
+    "42": [
+      "database_migrations_2026_09_24_101600_create_benchmarks_arabic_table_php",
+      "migrations_2026_09_24_101600_create_benchmarks_arabic_table_down",
+      "migrations_2026_09_24_101600_create_benchmarks_arabic_table_up"
+    ],
+    "43": [
+      "database_migrations_2026_09_24_121506_add_comprehensive_openrouter_fields_to_tables_php",
+      "migrations_2026_09_24_121506_add_comprehensive_openrouter_fields_to_tables_down",
+      "migrations_2026_09_24_121506_add_comprehensive_openrouter_fields_to_tables_up"
+    ],
+    "44": [
+      "database_migrations_2026_09_24_123446_create_model_offerings_table_php",
+      "migrations_2026_09_24_123446_create_model_offerings_table_down",
+      "migrations_2026_09_24_123446_create_model_offerings_table_up"
+    ],
+    "45": [
+      "tests_unit_exampletest_php",
+      "unit_exampletest_exampletest",
+      "unit_exampletest_exampletest_test_that_true_is_true"
+    ],
+    "46": [
+      "app_http_controllers_controller_php",
+      "controllers_controller_controller"
+    ],
+    "47": [
+      "config_app",
+      "config_services"
+    ],
+    "48": [
+      "concept_mailers",
+      "config_mail"
+    ],
+    "49": [
+      "tests_testcase_php",
+      "tests_testcase_testcase"
+    ],
+    "50": [
+      "vite_config_js"
+    ],
+    "51": [
+      "routes_web_php"
+    ],
+    "52": [
+      "bootstrap_app_php"
+    ],
+    "53": [
+      "bootstrap_providers_php"
+    ],
+    "54": [
+      "bootstrap_cache_packages_php"
+    ],
+    "55": [
+      "bootstrap_cache_services_php"
+    ],
+    "56": [
+      "config_filesystems_php"
+    ],
+    "57": [
+      "config_mail_php"
+    ],
+    "58": [
+      "config_app_php"
+    ],
+    "59": [
+      "config_database_php"
+    ],
+    "60": [
+      "config_session_php"
+    ],
+    "61": [
+      "config_queue_php"
+    ],
+    "62": [
+      "config_logging_php"
+    ],
+    "63": [
+      "config_cache_php"
+    ],
+    "64": [
+      "config_services_php"
+    ],
+    "65": [
+      "resources_views_welcome_blade_php"
+    ],
+    "66": [
+      "resources_views_admin_dashboard_blade_php"
+    ],
+    "67": [
+      "resources_views_admin_auth_login_blade_php"
+    ],
+    "68": [
+      "resources_views_admin_users_index_blade_php"
+    ],
+    "69": [
+      "resources_views_admin_providers_index_blade_php"
+    ],
+    "70": [
+      "resources_views_admin_models_show_blade_php"
+    ],
+    "71": [
+      "resources_views_admin_models_index_blade_php"
+    ],
+    "72": [
+      "resources_views_layouts_admin_blade_php"
+    ],
+    "73": [
+      "resources_js_app_js"
+    ],
+    "74": [
+      "public_index_php"
+    ],
+    "75": [
+      "test_example_unit"
+    ]
+  },
+  "cohesion": {},
+  "god_nodes": [
+    {
+      "id": "services_catalogpricingfetcherservice_catalogpricingfetcherservice",
+      "label": "CatalogPricingFetcherService",
+      "degree": 19
+    },
+    {
+      "id": "feature_adminpaneltest_adminpaneltest",
+      "label": "AdminPanelTest",
+      "degree": 16
+    },
+    {
+      "id": "models_modeloffering_modeloffering",
+      "label": "ModelOffering",
+      "degree": 14
+    },
+    {
+      "id": "models_aimodel_aimodel",
+      "label": "AiModel",
+      "degree": 12
+    },
+    {
+      "id": "models_user_user",
+      "label": "User",
+      "degree": 12
+    },
+    {
+      "id": "furniture_composer_require_dev",
+      "label": "require-dev",
+      "degree": 9
+    },
+    {
+      "id": "furniture_composer_scripts",
+      "label": "scripts",
+      "degree": 9
+    },
+    {
+      "id": "feature_catalogpricingfetchertest_catalogpricingfetchertest",
+      "label": "CatalogPricingFetcherTest",
+      "degree": 8
+    },
+    {
+      "id": "feature_aiplatformdatabasetest_aiplatformdatabasetest",
+      "label": "AiPlatformDatabaseTest",
+      "degree": 8
+    },
+    {
+      "id": "admin_aimodelcontroller_aimodelcontroller",
+      "label": "AiModelController",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "ADR 0001: Bespoke Blade/Tailwind v4 Admin",
+      "target": "Admin Layout (layouts/admin.blade.php)",
+      "source_files": [
+        "",
+        ""
+      ],
+      "confidence": "INFERRED",
+      "relation": "decides architecture of",
+      "note": "Bridges community 1 \u2192 community 8"
+    },
+    {
+      "source": "Artisan CLI Entry Point",
+      "target": "Application Bootstrap (bootstrap/app.php)",
+      "source_files": [
+        "",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "requires and bootstraps",
+      "note": "Bridges community 5 \u2192 community 7"
+    },
+    {
+      "source": "AdminMiddleware",
+      "target": "User (users table)",
+      "source_files": [
+        "",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "checks isAdmin() on authenticated",
+      "note": "Bridges community 7 \u2192 community 0"
+    },
+    {
+      "source": "ModelOffering Model",
+      "target": "AiModel (canonical AI model record)",
+      "source_files": [
+        "",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "belongs to (aiModel relation on model_id)",
+      "note": "Bridges community 1 \u2192 community 0"
+    },
+    {
+      "source": "UserFactory",
+      "target": "Illuminate Factory Base Class",
+      "source_files": [
+        "",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "extends",
+      "note": "Bridges community 3 \u2192 community 0"
+    }
+  ]
+}

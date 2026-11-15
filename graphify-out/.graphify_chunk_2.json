@@ -1,0 +1,830 @@
+{
+  "nodes": [
+    {
+      "id": "migration_create_providers",
+      "label": "Create Providers Table Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_create_models",
+      "label": "Create Models Table Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_create_model_specs",
+      "label": "Create Model Specs Table Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_create_benchmarks_general",
+      "label": "Create Benchmarks General Table Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_create_benchmarks_arabic",
+      "label": "Create Benchmarks Arabic Table Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_create_speed_telemetry",
+      "label": "Create Speed Telemetry Table Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_create_model_offerings",
+      "label": "Create Model Offerings Table Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_add_openrouter_fields",
+      "label": "Add Comprehensive OpenRouter Fields Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_add_curation_flags",
+      "label": "Add Curation Flags To Models Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_add_role_to_users",
+      "label": "Add Role To Users Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_create_users",
+      "label": "Create Users Table Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_create_cache",
+      "label": "Create Cache Table Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "migration_create_jobs",
+      "label": "Create Jobs Table Migration",
+      "file_type": "code"
+    },
+    {
+      "id": "table_providers",
+      "label": "providers Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_models",
+      "label": "models Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_model_specs",
+      "label": "model_specs Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_benchmarks_general",
+      "label": "benchmarks_general Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_benchmarks_arabic",
+      "label": "benchmarks_arabic Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_speed_telemetry",
+      "label": "speed_telemetry Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_model_offerings",
+      "label": "model_offerings Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_users",
+      "label": "users Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_password_reset_tokens",
+      "label": "password_reset_tokens Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_sessions",
+      "label": "sessions Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_cache",
+      "label": "cache Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_cache_locks",
+      "label": "cache_locks Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_jobs",
+      "label": "jobs Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_job_batches",
+      "label": "job_batches Table",
+      "file_type": "code"
+    },
+    {
+      "id": "table_failed_jobs",
+      "label": "failed_jobs Table",
+      "file_type": "code"
+    },
+    {
+      "id": "model_provider",
+      "label": "Provider Eloquent Model",
+      "file_type": "code"
+    },
+    {
+      "id": "model_ai_model",
+      "label": "AiModel Eloquent Model",
+      "file_type": "code"
+    },
+    {
+      "id": "model_model_spec",
+      "label": "ModelSpec Eloquent Model",
+      "file_type": "code"
+    },
+    {
+      "id": "model_benchmark_general",
+      "label": "BenchmarkGeneral Eloquent Model",
+      "file_type": "code"
+    },
+    {
+      "id": "model_benchmark_arabic",
+      "label": "BenchmarkArabic Eloquent Model",
+      "file_type": "code"
+    },
+    {
+      "id": "model_speed_telemetry",
+      "label": "SpeedTelemetry Eloquent Model",
+      "file_type": "code"
+    },
+    {
+      "id": "model_model_offering",
+      "label": "ModelOffering Eloquent Model",
+      "file_type": "code"
+    },
+    {
+      "id": "model_user",
+      "label": "User Eloquent Model",
+      "file_type": "code"
+    },
+    {
+      "id": "service_catalog_pricing_fetcher",
+      "label": "CatalogPricingFetcherService",
+      "file_type": "code"
+    },
+    {
+      "id": "external_openrouter_api",
+      "label": "OpenRouter Models API",
+      "file_type": "document"
+    },
+    {
+      "id": "external_litellm_api",
+      "label": "LiteLLM Prices API",
+      "file_type": "document"
+    },
+    {
+      "id": "command_catalog_fetch_prices",
+      "label": "catalog:fetch-prices Artisan Command",
+      "file_type": "code"
+    },
+    {
+      "id": "seeder_database",
+      "label": "DatabaseSeeder",
+      "file_type": "code"
+    },
+    {
+      "id": "test_case",
+      "label": "Tests\\TestCase",
+      "file_type": "code"
+    },
+    {
+      "id": "test_catalog_pricing_fetcher",
+      "label": "CatalogPricingFetcherTest",
+      "file_type": "code"
+    },
+    {
+      "id": "test_admin_panel",
+      "label": "AdminPanelTest",
+      "file_type": "code"
+    },
+    {
+      "id": "test_ai_platform_database",
+      "label": "AiPlatformDatabaseTest",
+      "file_type": "code"
+    },
+    {
+      "id": "test_example_feature",
+      "label": "ExampleTest (Feature)",
+      "file_type": "code"
+    },
+    {
+      "id": "test_example_unit",
+      "label": "ExampleTest (Unit)",
+      "file_type": "code"
+    },
+    {
+      "id": "config_filesystems",
+      "label": "Filesystems Configuration",
+      "file_type": "code"
+    },
+    {
+      "id": "config_auth",
+      "label": "Auth Configuration",
+      "file_type": "code"
+    },
+    {
+      "id": "config_mail",
+      "label": "Mail Configuration",
+      "file_type": "code"
+    },
+    {
+      "id": "disk_local",
+      "label": "Local Storage Disk",
+      "file_type": "code"
+    },
+    {
+      "id": "disk_public",
+      "label": "Public Storage Disk",
+      "file_type": "code"
+    },
+    {
+      "id": "disk_s3",
+      "label": "S3 Storage Disk",
+      "file_type": "code"
+    },
+    {
+      "id": "concept_web_guard",
+      "label": "Web Session Auth Guard",
+      "file_type": "code"
+    },
+    {
+      "id": "concept_password_broker",
+      "label": "Users Password Reset Broker",
+      "file_type": "code"
+    },
+    {
+      "id": "concept_mailers",
+      "label": "Mailer Transports (smtp, ses, postmark, resend, sendmail, log)",
+      "file_type": "code"
+    },
+    {
+      "id": "concept_curation_flags",
+      "label": "Model Curation Flags (is_active, is_featured)",
+      "file_type": "code"
+    },
+    {
+      "id": "concept_capabilities",
+      "label": "Model Capabilities JSON (vision, function calling, caching, web search)",
+      "file_type": "code"
+    },
+    {
+      "id": "concept_role_access",
+      "label": "Role-Based Admin Access (admin, editor, user)",
+      "file_type": "code"
+    },
+    {
+      "id": "concept_pricing_matrix",
+      "label": "Tiered & Caching Pricing Matrix (batch, flex, priority, cache read/write, regional uplift)",
+      "file_type": "code"
+    },
+    {
+      "id": "concept_admin_portal",
+      "label": "Admin Portal Routes",
+      "file_type": "code"
+    }
+  ],
+  "edges": [
+    {
+      "source": "migration_create_providers",
+      "target": "table_providers",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_models",
+      "target": "table_models",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_model_specs",
+      "target": "table_model_specs",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_benchmarks_general",
+      "target": "table_benchmarks_general",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_benchmarks_arabic",
+      "target": "table_benchmarks_arabic",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_speed_telemetry",
+      "target": "table_speed_telemetry",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_model_offerings",
+      "target": "table_model_offerings",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_model_offerings",
+      "target": "table_models",
+      "relation": "adds capabilities JSON column to",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_add_openrouter_fields",
+      "target": "table_models",
+      "relation": "extends with OpenRouter metadata fields (canonical_slug, hugging_face_id, architecture_details, reasoning_spec)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_add_openrouter_fields",
+      "target": "table_model_specs",
+      "relation": "extends with cache, image, audio pricing and moderation fields",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_add_openrouter_fields",
+      "target": "table_benchmarks_general",
+      "relation": "extends with intelligence_index, coding_index, agentic_index, design_arena",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_add_curation_flags",
+      "target": "table_models",
+      "relation": "adds is_active and is_featured flags to",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_add_role_to_users",
+      "target": "table_users",
+      "relation": "adds role column to",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_users",
+      "target": "table_users",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_users",
+      "target": "table_password_reset_tokens",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_users",
+      "target": "table_sessions",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_cache",
+      "target": "table_cache",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_cache",
+      "target": "table_cache_locks",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_jobs",
+      "target": "table_jobs",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_jobs",
+      "target": "table_job_batches",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "migration_create_jobs",
+      "target": "table_failed_jobs",
+      "relation": "creates",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "table_models",
+      "target": "table_providers",
+      "relation": "declares cascade-delete provider_id foreign key referencing",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "table_model_specs",
+      "target": "table_models",
+      "relation": "declares cascade-delete model_id foreign key referencing",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "table_benchmarks_general",
+      "target": "table_models",
+      "relation": "declares cascade-delete model_id foreign key referencing",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "table_benchmarks_arabic",
+      "target": "table_models",
+      "relation": "declares cascade-delete model_id foreign key referencing",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "table_speed_telemetry",
+      "target": "table_models",
+      "relation": "declares cascade-delete model_id foreign key referencing",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "table_model_offerings",
+      "target": "table_models",
+      "relation": "declares cascade-delete model_id foreign key referencing",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "table_model_offerings",
+      "target": "table_providers",
+      "relation": "declares cascade-delete provider_id foreign key referencing",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "table_sessions",
+      "target": "table_users",
+      "relation": "references user_id of",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_provider",
+      "target": "table_providers",
+      "relation": "maps to",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_ai_model",
+      "target": "table_models",
+      "relation": "maps to",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_model_spec",
+      "target": "table_model_specs",
+      "relation": "maps to",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_benchmark_general",
+      "target": "table_benchmarks_general",
+      "relation": "maps to",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_benchmark_arabic",
+      "target": "table_benchmarks_arabic",
+      "relation": "maps to",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_speed_telemetry",
+      "target": "table_speed_telemetry",
+      "relation": "maps to",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_model_offering",
+      "target": "table_model_offerings",
+      "relation": "maps to",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_user",
+      "target": "table_users",
+      "relation": "maps to",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_ai_model",
+      "target": "model_provider",
+      "relation": "belongs to (provider relation)",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_ai_model",
+      "target": "model_model_spec",
+      "relation": "exposes latestSpec from",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_model_spec",
+      "target": "model_ai_model",
+      "relation": "exposes aiModel relation to",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_ai_model",
+      "target": "model_benchmark_general",
+      "relation": "has one benchmarkGeneral",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_ai_model",
+      "target": "model_benchmark_arabic",
+      "relation": "has one benchmarkArabic",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_ai_model",
+      "target": "model_speed_telemetry",
+      "relation": "has many speedTelemetries and latestSpeed from",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_ai_model",
+      "target": "model_model_offering",
+      "relation": "has many offerings plus officialOffering and cheapestOffering from",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_model_offering",
+      "target": "model_provider",
+      "relation": "belongs to (provider relation)",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "model_model_offering",
+      "target": "concept_pricing_matrix",
+      "relation": "implements query scopes (direct, enterpriseCloud, fastInference, officialDirect, cheapest) over",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "table_model_offerings",
+      "target": "concept_pricing_matrix",
+      "relation": "stores columns for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "service_catalog_pricing_fetcher",
+      "target": "external_openrouter_api",
+      "relation": "fetches model catalog from (OPENROUTER_MODELS_URL)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "service_catalog_pricing_fetcher",
+      "target": "external_litellm_api",
+      "relation": "fetches pricing from (LITELLM_PRICES_URL)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "service_catalog_pricing_fetcher",
+      "target": "model_provider",
+      "relation": "creates providers during syncCatalog",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "service_catalog_pricing_fetcher",
+      "target": "model_ai_model",
+      "relation": "creates and updates models during syncCatalog",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "service_catalog_pricing_fetcher",
+      "target": "model_model_spec",
+      "relation": "records normalized pricing in",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "service_catalog_pricing_fetcher",
+      "target": "model_model_offering",
+      "relation": "creates per-endpoint offerings in",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "service_catalog_pricing_fetcher",
+      "target": "model_benchmark_general",
+      "relation": "persists Artificial Analysis benchmarks to",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "service_catalog_pricing_fetcher",
+      "target": "concept_capabilities",
+      "relation": "derives supports_vision, supports_function_calling, supports_prompt_caching, supports_web_search flags into",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "command_catalog_fetch_prices",
+      "target": "service_catalog_pricing_fetcher",
+      "relation": "invokes syncCatalog via",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "seeder_database",
+      "target": "model_user",
+      "relation": "seeds Test User through factory of",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_catalog_pricing_fetcher",
+      "target": "test_case",
+      "relation": "extends",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_admin_panel",
+      "target": "test_case",
+      "relation": "extends",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_ai_platform_database",
+      "target": "test_case",
+      "relation": "extends",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_example_feature",
+      "target": "test_case",
+      "relation": "extends",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_catalog_pricing_fetcher",
+      "target": "service_catalog_pricing_fetcher",
+      "relation": "tests syncCatalog with mocked HTTP APIs",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_catalog_pricing_fetcher",
+      "target": "command_catalog_fetch_prices",
+      "relation": "tests execution of",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_ai_platform_database",
+      "target": "model_ai_model",
+      "relation": "verifies factories, relationships, casts and cascade deletes for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_ai_platform_database",
+      "target": "model_model_offering",
+      "relation": "verifies offering scopes and flags on",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_admin_panel",
+      "target": "concept_admin_portal",
+      "relation": "verifies routing, login and access control of",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_admin_panel",
+      "target": "concept_role_access",
+      "relation": "verifies enforcement of",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_admin_panel",
+      "target": "concept_curation_flags",
+      "relation": "tests toggling of",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_admin_panel",
+      "target": "model_user",
+      "relation": "tests admin create and update flows for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "test_example_feature",
+      "target": "concept_admin_portal",
+      "relation": "asserts root URL redirects to admin dashboard of",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "concept_curation_flags",
+      "target": "table_models",
+      "relation": "implemented as indexed boolean columns on",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "concept_capabilities",
+      "target": "table_models",
+      "relation": "stored as capabilities JSON column on",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "concept_role_access",
+      "target": "table_users",
+      "relation": "enforced via role column on",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "config_auth",
+      "target": "concept_web_guard",
+      "relation": "defines default session guard",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "config_auth",
+      "target": "concept_password_broker",
+      "relation": "defines users password broker for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "config_auth",
+      "target": "model_user",
+      "relation": "configures Eloquent user provider using",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "concept_password_broker",
+      "target": "table_password_reset_tokens",
+      "relation": "stores reset tokens in",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "config_filesystems",
+      "target": "disk_local",
+      "relation": "defines",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "config_filesystems",
+      "target": "disk_public",
+      "relation": "defines",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "config_filesystems",
+      "target": "disk_s3",
+      "relation": "defines with AWS environment credentials",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "config_mail",
+      "target": "concept_mailers",
+      "relation": "configures available transports as",
+      "confidence": "EXTRACTED"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyper_ai_platform_data_model",
+      "label": "AI Platform Catalog Data Model",
+      "relation": "group of tables forming the AI model catalog schema, all cascading from providers/models",
+      "confidence": "EXTRACTED",
+      "nodes": [
+        "table_providers",
+        "table_models",
+        "table_model_specs",
+        "table_benchmarks_general",
+        "table_benchmarks_arabic",
+        "table_speed_telemetry",
+        "table_model_offerings"
+      ]
+    },
+    {
+      "id": "hyper_laravel_infra_tables",
+      "label": "Laravel Framework Infrastructure Tables",
+      "relation": "group of default framework tables created by the base Laravel migrations",
+      "confidence": "EXTRACTED",
+      "nodes": [
+        "table_users",
+        "table_password_reset_tokens",
+        "table_sessions",
+        "table_cache",
+        "table_cache_locks",
+        "table_jobs",
+        "table_job_batches",
+        "table_failed_jobs"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Admin Authentication and Role Scoping
+
+The application requires isolated administrative access with specific user management capabilities while the public landing page is still under development. We decided to place all administration routes under the `/admin` prefix protected by an `AdminMiddleware` checking for `role === 'admin'`, with unauthenticated requests or root `/` traffic directed to `/admin/login`. An initial administrator account (`ap.sy.uk@gmail.com`) is seeded with role `admin`, and self-protection logic prevents logged-in administrators from deleting or demoting their own accounts.

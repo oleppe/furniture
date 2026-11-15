@@ -1,0 +1,437 @@
+{
+  "nodes": [
+    {
+      "id": "model_user",
+      "label": "User Model (role-based)",
+      "file_type": "code"
+    },
+    {
+      "id": "model_offering",
+      "label": "ModelOffering Model",
+      "file_type": "code"
+    },
+    {
+      "id": "model_benchmark_arabic",
+      "label": "BenchmarkArabic Model",
+      "file_type": "code"
+    },
+    {
+      "id": "model_ai_model",
+      "label": "AiModel (canonical AI model record)",
+      "file_type": "code"
+    },
+    {
+      "id": "model_provider",
+      "label": "Provider (hosting/developer entity)",
+      "file_type": "code"
+    },
+    {
+      "id": "view_welcome",
+      "label": "Welcome Page (welcome.blade.php)",
+      "file_type": "code"
+    },
+    {
+      "id": "view_admin_dashboard",
+      "label": "Admin Dashboard View",
+      "file_type": "code"
+    },
+    {
+      "id": "view_admin_login",
+      "label": "Admin Login View",
+      "file_type": "code"
+    },
+    {
+      "id": "view_admin_users_index",
+      "label": "Admin Users Index View",
+      "file_type": "code"
+    },
+    {
+      "id": "view_admin_providers_index",
+      "label": "Admin Providers Index View",
+      "file_type": "code"
+    },
+    {
+      "id": "view_admin_models_index",
+      "label": "Admin Models Index View",
+      "file_type": "code"
+    },
+    {
+      "id": "view_admin_models_show",
+      "label": "Admin Model Detail View",
+      "file_type": "code"
+    },
+    {
+      "id": "view_layout_admin",
+      "label": "Admin Layout (layouts/admin.blade.php)",
+      "file_type": "code"
+    },
+    {
+      "id": "js_app",
+      "label": "Vite JS Entry (resources/js/app.js)",
+      "file_type": "code"
+    },
+    {
+      "id": "public_index",
+      "label": "Laravel Front Controller (public/index.php)",
+      "file_type": "code"
+    },
+    {
+      "id": "robots_txt",
+      "label": "robots.txt",
+      "file_type": "code"
+    },
+    {
+      "id": "doc_readme",
+      "label": "README (Laravel framework)",
+      "file_type": "document"
+    },
+    {
+      "id": "doc_context",
+      "label": "AI Platform Context (ubiquitous language)",
+      "file_type": "document"
+    },
+    {
+      "id": "doc_model_json_schema",
+      "label": "OpenRouter Model JSON Schema & DB Mapping",
+      "file_type": "document"
+    },
+    {
+      "id": "doc_agents",
+      "label": "AGENTS.md (Laravel Boost guidelines)",
+      "file_type": "document"
+    },
+    {
+      "id": "doc_claude",
+      "label": "CLAUDE.md (Laravel setup/Boost bootstrap)",
+      "file_type": "document"
+    },
+    {
+      "id": "doc_roadmap",
+      "label": "Arabic LLM Intelligence Platform PRD & Roadmap",
+      "file_type": "document"
+    },
+    {
+      "id": "adr_0001",
+      "label": "ADR 0001: Bespoke Blade/Tailwind v4 Admin",
+      "file_type": "paper"
+    },
+    {
+      "id": "adr_0002",
+      "label": "ADR 0002: Admin Authentication & Role Scoping",
+      "file_type": "paper"
+    },
+    {
+      "id": "concept_admin_role",
+      "label": "Admin Role & Admin Portal Access",
+      "file_type": "document"
+    },
+    {
+      "id": "concept_model_offering",
+      "label": "Model Offering (hosting endpoint + pricing)",
+      "file_type": "document"
+    },
+    {
+      "id": "concept_arabic_efficiency",
+      "label": "Arabic Token Efficiency Metrics",
+      "file_type": "document"
+    },
+    {
+      "id": "concept_openrouter_api",
+      "label": "OpenRouter /models API (data source)",
+      "file_type": "document"
+    },
+    {
+      "id": "concept_admin_middleware",
+      "label": "AdminMiddleware (role === 'admin' guard)",
+      "file_type": "code"
+    }
+  ],
+  "edges": [
+    {
+      "source": "model_offering",
+      "target": "model_ai_model",
+      "relation": "belongs to (aiModel relation on model_id)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "model_offering",
+      "target": "model_provider",
+      "relation": "belongs to (provider relation on provider_id)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "model_offering",
+      "target": "concept_model_offering",
+      "relation": "implements",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "model_benchmark_arabic",
+      "target": "model_ai_model",
+      "relation": "belongs to (aiModel relation)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "model_benchmark_arabic",
+      "target": "concept_arabic_efficiency",
+      "relation": "measures (token inflation, effective Arabic cost per 1k words)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "model_user",
+      "target": "concept_admin_role",
+      "relation": "defines via isAdmin() role check",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "concept_admin_middleware",
+      "target": "concept_admin_role",
+      "relation": "enforces access for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "adr_0002",
+      "target": "concept_admin_middleware",
+      "relation": "decides placement and behavior of",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "adr_0002",
+      "target": "model_user",
+      "relation": "specifies seeded admin account and role field for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "adr_0002",
+      "target": "view_admin_login",
+      "relation": "routes unauthenticated traffic to",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "adr_0001",
+      "target": "view_layout_admin",
+      "relation": "decides architecture of",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "adr_0001",
+      "target": "concept_admin_role",
+      "relation": "decides UI stack (Blade + Tailwind v4 + Alpine) for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_dashboard",
+      "target": "view_layout_admin",
+      "relation": "extends",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_models_index",
+      "target": "view_layout_admin",
+      "relation": "extends",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_models_show",
+      "target": "view_layout_admin",
+      "relation": "extends",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_providers_index",
+      "target": "view_layout_admin",
+      "relation": "extends",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_users_index",
+      "target": "view_layout_admin",
+      "relation": "extends",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_layout_admin",
+      "target": "view_admin_dashboard",
+      "relation": "navigates to (admin.dashboard route)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_layout_admin",
+      "target": "view_admin_models_index",
+      "relation": "navigates to (admin.models.index route)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_layout_admin",
+      "target": "view_admin_providers_index",
+      "relation": "navigates to (admin.providers.index route)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_layout_admin",
+      "target": "view_admin_users_index",
+      "relation": "navigates to (admin.users.index route)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_dashboard",
+      "target": "view_admin_models_index",
+      "relation": "links to for model browsing and sync",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_dashboard",
+      "target": "view_admin_providers_index",
+      "relation": "links to provider directory",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_dashboard",
+      "target": "view_admin_users_index",
+      "relation": "links to user management",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_dashboard",
+      "target": "model_ai_model",
+      "relation": "renders model stats, specs and pricing",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_models_index",
+      "target": "model_ai_model",
+      "relation": "renders and toggles (active/featured)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_models_show",
+      "target": "model_ai_model",
+      "relation": "renders detail page for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_providers_index",
+      "target": "model_provider",
+      "relation": "renders provider directory",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_users_index",
+      "target": "model_user",
+      "relation": "renders and creates users",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_admin_login",
+      "target": "concept_admin_role",
+      "relation": "authenticates entry to portal (admin.login.submit)",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "view_welcome",
+      "target": "js_app",
+      "relation": "loads via Vite bundle",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "public_index",
+      "target": "view_welcome",
+      "relation": "bootstraps Laravel app serving",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "doc_context",
+      "target": "concept_model_offering",
+      "relation": "defines ubiquitous language for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "doc_context",
+      "target": "concept_admin_role",
+      "relation": "defines Admin and User terminology",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "doc_context",
+      "target": "concept_arabic_efficiency",
+      "relation": "scopes platform focus on Arabic LLM evaluation",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "doc_context",
+      "target": "model_ai_model",
+      "relation": "defines canonical terminology for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "doc_model_json_schema",
+      "target": "concept_openrouter_api",
+      "relation": "documents field mapping from",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "concept_openrouter_api",
+      "target": "model_ai_model",
+      "relation": "supplies data synced into models table",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "doc_roadmap",
+      "target": "concept_arabic_efficiency",
+      "relation": "plans arabic_token_metrics pipeline for",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "doc_roadmap",
+      "target": "concept_openrouter_api",
+      "relation": "specifies daily data fetching from",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "doc_roadmap",
+      "target": "concept_model_offering",
+      "relation": "plans pricing_history and speed benchmark tables behind",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "robots_txt",
+      "target": "doc_roadmap",
+      "relation": "supports crawlability for planned Programmatic SEO phase",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "doc_agents",
+      "target": "doc_claude",
+      "relation": "generated from same Laravel Boost guidelines",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "doc_agents",
+      "target": "model_user",
+      "relation": "governs coding conventions for",
+      "confidence": "INFERRED"
+    },
+    {
+      "source": "doc_readme",
+      "target": "public_index",
+      "relation": "describes framework bootstrapped by",
+      "confidence": "INFERRED"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_admin_panel",
+      "label": "Bespoke Admin Panel (Blade + Tailwind v4 + Alpine.js per ADR 0001)",
+      "members": [
+        "view_layout_admin",
+        "view_admin_dashboard",
+        "view_admin_models_index",
+        "view_admin_models_show",
+        "view_admin_providers_index",
+        "view_admin_users_index",
+        "view_admin_login"
+      ],
+      "relation": "collectively forms"
+    }
+  ]
+}

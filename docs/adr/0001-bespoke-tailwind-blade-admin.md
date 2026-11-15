@@ -1,0 +1,3 @@
+# Bespoke Blade and Tailwind v4 Architecture for Admin Panel
+
+The platform requires an administrative panel to manage users and inspect over 880 AI models and nearly 3,000 multi-provider hosting offerings on Laravel 13 with Tailwind CSS v4. We decided to build a bespoke Laravel Blade and Tailwind CSS v4 dashboard with Alpine.js rather than installing third-party administrative packages like Filament or Nova. This eliminates framework version incompatibilities with Laravel 13, avoids heavyweight dependency bloat, and provides the exact flexibility required for multi-provider pricing matrix inspection and slide-over comparison drawers.

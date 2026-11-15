@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T14:39:00+01:00",
+  "title": "Design System: Idraak Lab",
+  "extensions": {
+    "colorMeta": {
+      "cyan-signal": {
+        "role": "primary",
+        "displayName": "Cyan Signal",
+        "canonical": "#4cd7f6",
+        "tonalRamp": ["#051e24", "#08343e", "#0c4e5e", "#0e7490", "#06b6d4", "#4cd7f6", "#8ce7fb", "#d6f6fe"]
+      },
+      "emerald-telemetry": {
+        "role": "secondary",
+        "displayName": "Emerald Telemetry",
+        "canonical": "#4edea3",
+        "tonalRamp": ["#031f15", "#043824", "#045738", "#047857", "#10b981", "#4edea3", "#88ecc2", "#d1fae8"]
+      },
+      "indigo-accent": {
+        "role": "tertiary",
+        "displayName": "Indigo Accent",
+        "canonical": "#c0c1ff",
+        "tonalRamp": ["#110f3d", "#1e1b66", "#312e99", "#4f46e5", "#7673f2", "#a09eff", "#c0c1ff", "#e8e8ff"]
+      },
+      "midnight-slate": {
+        "role": "neutral",
+        "displayName": "Midnight Slate",
+        "canonical": "#0b1326",
+        "tonalRamp": ["#06090e", "#0b1326", "#111827", "#1a2234", "#334155", "#64748b", "#94a3b8", "#e8eef7"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display Hero", "purpose": "Hero statements and primary page titles." },
+      "headline": { "displayName": "Headline", "purpose": "Section headers, card group titles, and brand wordmark." },
+      "title": { "displayName": "Title", "purpose": "Card headings and sub-sections." },
+      "body": { "displayName": "Body", "purpose": "Explanations, research excerpts, table text, and form controls." },
+      "label": { "displayName": "Label / Telemetry", "purpose": "Telemetry ticker items, keyboard hints, and monospace metrics." }
+    },
+    "shadows": [
+      { "name": "light-card-ambient", "value": "0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.02)", "purpose": "Subtle ambient lift for glass cards in light mode only." },
+      { "name": "light-header-hairline", "value": "0 1px 3px 0 rgba(0, 0, 0, 0.03)", "purpose": "Minimal header separation in light mode." }
+    ],
+    "motion": [
+      { "name": "transition-standard", "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Crisp color, border, and opacity transitions on interactive controls." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action CTA using Cyan Container fill.",
+      "html": "<button class=\"ds-btn-primary\" dir=\"rtl\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z\"/></svg><span>تسجيل الدخول</span></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 6px; background: var(--color-primary-container, #06b6d4); color: var(--color-on-primary-container, #00424f); border: none; border-radius: 8px; padding: 8px 16px; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-primary:hover { opacity: 0.9; } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-primary, #4cd7f6); outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Bordered panel action button for filters, pagination, and secondary links.",
+      "html": "<button class=\"ds-btn-secondary\" dir=\"rtl\"><span>عرض المزيد</span></button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; gap: 6px; background: var(--color-surface-panel, #111827); color: var(--color-text-secondary, #94a3b8); border: 1px solid var(--color-border-subtle, #1e293b); border-radius: 8px; padding: 8px 16px; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: border-color 150ms, color 150ms; } .ds-btn-secondary:hover { border-color: var(--color-border-highlight, #334155); color: var(--color-text-primary, #f8fafc); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--color-primary, #4cd7f6); outline-offset: 2px; }"
+    },
+    {
+      "name": "Search Input",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Model search field with subtle hairline border and cyan focus state.",
+      "html": "<div class=\"ds-input-wrap\" dir=\"rtl\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><input class=\"ds-input\" type=\"text\" placeholder=\"بحث عن نموذج أو شركة...\" /></div>",
+      "css": ".ds-input-wrap { display: inline-flex; align-items: center; gap: 8px; background: var(--color-surface-panel, #111827); border: 1px solid var(--color-border-subtle, #1e293b); border-radius: 8px; padding: 8px 14px; color: var(--color-text-tertiary, #64748b); transition: border-color 150ms; } .ds-input-wrap:focus-within { border-color: rgba(76, 215, 246, 0.5); } .ds-input { background: transparent; border: none; outline: none; color: var(--color-text-primary, #f8fafc); font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 13px; width: 200px; } .ds-input::placeholder { color: var(--color-text-tertiary, #64748b); }"
+    },
+    {
+      "name": "Live Status Badge",
+      "kind": "chip",
+      "refersTo": "badge-live",
+      "description": "Pill badge indicating live benchmark telemetry.",
+      "html": "<span class=\"ds-badge-live\" dir=\"rtl\"><span class=\"ds-badge-dot\"></span><span>رصد لحظي للنماذج</span></span>",
+      "css": ".ds-badge-live { display: inline-flex; align-items: center; gap: 6px; padding: 4px 14px; border-radius: 9999px; border: 1px solid rgba(76, 215, 246, 0.3); background: rgba(76, 215, 246, 0.05); color: var(--color-primary, #4cd7f6); font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 12px; font-weight: 600; } .ds-badge-dot { width: 6px; height: 6px; border-radius: 9999px; background: var(--color-metric-efficiency, #10b981); }"
+    },
+    {
+      "name": "Telemetry Metric Card",
+      "kind": "card",
+      "refersTo": "card-panel",
+      "description": "Panel card pairing an Arabic label with a monospace benchmark readout.",
+      "html": "<div class=\"ds-card-panel\" dir=\"rtl\"><div class=\"ds-card-label\">متوسط زمن الاستجابة</div><div class=\"ds-card-metric\">0.42s</div></div>",
+      "css": ".ds-card-panel { background: var(--color-surface-panel, #111827); border: 1px solid var(--color-border-subtle, #1e293b); border-radius: 12px; padding: 16px; transition: border-color 150ms; } .ds-card-panel:hover { border-color: var(--color-border-highlight, #334155); } .ds-card-label { font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 13px; color: var(--color-text-secondary, #94a3b8); margin-bottom: 6px; } .ds-card-metric { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; letter-spacing: -0.03em; color: var(--color-metric-speed, #06b6d4); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Telemetry Observatory",
+    "overview": "Idraak Lab is built like a high-precision Arabic engineering instrument: deep midnight-navy surfaces, crisp cyan and emerald telemetry signals, and tabular numbers that let AI developers scan latency, tokenization efficiency, and cost without visual noise. Every surface is designed RTL-first (dir=\"rtl\", lang=\"ar\") in dark mode by default, with a calibrated opt-in light mode that preserves contrast and surface separation.\n\nThe visual language is crisp, technical, and restrained. It rejects generic SaaS purple-pink gradients, decorative card-in-card clutter, and low-contrast gray-on-colored text that slows down benchmark comparison.",
+    "keyCharacteristics": [
+      "Dark-first Midnight Slate canvas (#0b1326 / #06090e) paired with a tinted Ice Slate light mode (#e8eef7) so cards always separate from the page.",
+      "High-legibility Arabic sans-serif (IBM Plex Sans Arabic) paired with JetBrains Mono for benchmark metrics, prices, and telemetry strips.",
+      "Tonal surface layering and 1px hairline borders (#1e293b) instead of heavy drop shadows.",
+      "Distinct per-metric color coding so speed, Arabic efficiency, cost, and latency scan instantaneously across tables."
+    ],
+    "rules": [
+      { "name": "The Metric Hue Rule", "body": "Speed (#06b6d4), Arabic Efficiency (#10b981), Cost (#f59e0b), and Latency (#ec4899) each own one dedicated hue. Never reuse metric hues for decorative gradients.", "section": "colors" },
+      { "name": "The Legible Canvas Rule", "body": "Never place muted gray text on saturated or dark-tinted containers without verifying contrast; light mode darkens all accents to WCAG-safe shades.", "section": "colors" },
+      { "name": "The Monospace Telemetry Rule", "body": "All numerical benchmark scores, latencies, token counts, and API prices render in JetBrains Mono so columns align cleanly across rows.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest in dark mode, separated by tonal contrast and 1px hairline borders rather than drop shadows.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do design every layout RTL-first (dir=\"rtl\") and verify both dark (default) and opt-in light mode contrast.",
+      "Do use JetBrains Mono for all numerical metrics, latencies, prices, and telemetry strips.",
+      "Do separate adjacent surfaces with tonal steps and 1px Border Subtle hairlines.",
+      "Do preserve dedicated metric hues (Speed, Efficiency, Cost, Latency) consistently across tables and charts."
+    ],
+    "donts": [
+      "Don't use generic SaaS purple-pink gradients or decorative card-in-card nesting.",
+      "Don't place low-contrast gray text on colored backgrounds where it slows down tabular scanning.",
+      "Don't add bouncy spring animations or heavy drop shadows to data cards.",
+      "Don't hardcode dark-only hex colors in views when a semantic token (bg-surface-panel, text-text-primary, border-border-subtle) exists."
+    ]
+  }
+}
+

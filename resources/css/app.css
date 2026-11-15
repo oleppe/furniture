@@ -1,0 +1,727 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'IBM Plex Sans Arabic', 'Instrument Sans', sans-serif;
+
+    /* ==========================================================================
+       IDRAAK LAB PUBLIC DESIGN SYSTEM (Stitch: AI Model Stats Hub)
+       ========================================================================== */
+
+    /* Typography families */
+    --font-display-hero: 'IBM Plex Sans Arabic', sans-serif;
+    --font-display-hero-mobile: 'IBM Plex Sans Arabic', sans-serif;
+    --font-headline-lg: 'IBM Plex Sans Arabic', sans-serif;
+    --font-headline-md: 'IBM Plex Sans Arabic', sans-serif;
+    --font-headline-sm: 'IBM Plex Sans Arabic', sans-serif;
+    --font-body-lg: 'IBM Plex Sans Arabic', sans-serif;
+    --font-body-md: 'IBM Plex Sans Arabic', sans-serif;
+    --font-body-sm: 'IBM Plex Sans Arabic', sans-serif;
+    --font-metric-display: 'JetBrains Mono', 'IBM Plex Sans Arabic', ui-monospace, monospace;
+    --font-metric-cell: 'JetBrains Mono', 'IBM Plex Sans Arabic', ui-monospace, monospace;
+    --font-label-code: 'JetBrains Mono', 'IBM Plex Sans Arabic', ui-monospace, monospace;
+
+    /* Typography scale */
+    --text-display-hero: 40px;
+    --text-display-hero--line-height: 48px;
+    --text-display-hero--font-weight: 700;
+    --text-display-hero--letter-spacing: 0em;
+    --text-display-hero-mobile: 28px;
+    --text-display-hero-mobile--line-height: 36px;
+    --text-display-hero-mobile--font-weight: 700;
+    --text-display-hero-mobile--letter-spacing: 0em;
+    --text-headline-lg: 28px;
+    --text-headline-lg--line-height: 36px;
+    --text-headline-lg--font-weight: 600;
+    --text-headline-md: 20px;
+    --text-headline-md--line-height: 28px;
+    --text-headline-md--font-weight: 600;
+    --text-headline-sm: 16px;
+    --text-headline-sm--line-height: 24px;
+    --text-headline-sm--font-weight: 600;
+    --text-body-lg: 16px;
+    --text-body-lg--line-height: 26px;
+    --text-body-lg--font-weight: 400;
+    --text-body-md: 14px;
+    --text-body-md--line-height: 22px;
+    --text-body-md--font-weight: 400;
+    --text-body-sm: 13px;
+    --text-body-sm--line-height: 19px;
+    --text-body-sm--font-weight: 400;
+    --text-metric-display: 22px;
+    --text-metric-display--line-height: 28px;
+    --text-metric-display--font-weight: 700;
+    --text-metric-display--letter-spacing: -0.03em;
+    --text-metric-cell: 14px;
+    --text-metric-cell--line-height: 18px;
+    --text-metric-cell--font-weight: 600;
+    --text-label-code: 12px;
+    --text-label-code--line-height: 16px;
+    --text-label-code--font-weight: 600;
+    --text-label-code--letter-spacing: 0em;
+
+    /* Spacing scale */
+    --spacing-gutter: 1rem;
+    --spacing-gutter-desktop: 1.5rem;
+    --spacing-margin: 1rem;
+    --spacing-margin-desktop: 2rem;
+    --spacing-space-xs: 0.25rem;
+    --spacing-space-sm: 0.5rem;
+    --spacing-space-md: 1rem;
+    --spacing-space-lg: 1.5rem;
+    --spacing-space-xl: 2.5rem;
+
+    /* Surfaces */
+    --color-surface: #0b1326;
+    --color-surface-base: #06090e;
+    --color-surface-subtle: #0b111a;
+    --color-surface-panel: #111827;
+    --color-surface-elevated: #1a2234;
+
+    /* Borders & text */
+    --color-border-subtle: #1e293b;
+    --color-border-highlight: #334155;
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #94a3b8;
+    --color-text-tertiary: #64748b;
+    --color-outline: #869397;
+    --color-outline-variant: #3d494c;
+
+    /* Brand accents */
+    --color-primary: #4cd7f6;
+    --color-on-primary: #003640;
+    --color-primary-container: #06b6d4;
+    --color-on-primary-container: #00424f;
+    --color-secondary: #4edea3;
+    --color-on-secondary: #003824;
+    --color-secondary-container: #00a572;
+    --color-on-secondary-container: #00311f;
+    --color-tertiary: #c0c1ff;
+    --color-on-tertiary: #1000a9;
+    --color-error: #ffb4ab;
+    --color-on-error: #690005;
+
+    /* Metric accents */
+    --color-metric-speed: #06b6d4;
+    --color-metric-efficiency: #10b981;
+    --color-metric-cost: #f59e0b;
+    --color-metric-latency: #ec4899;
+
+    /* Provider accents */
+    --color-provider-openai: #10a37f;
+    --color-provider-anthropic: #d97706;
+    --color-provider-google: #3b82f6;
+    --color-provider-deepseek: #4f46e5;
+    --color-provider-meta: #0668e1;
+}
+
+@layer utilities {
+    .glass-card {
+        background: rgba(15, 23, 42, 0.75);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-header {
+        background: rgba(10, 15, 29, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-sidebar {
+        background: rgba(9, 13, 24, 0.95);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-right: 1px solid rgba(255, 255, 255, 0.07);
+    }
+}
+
+/* ==========================================================================
+   LIGHT MODE DESIGN SYSTEM
+   ========================================================================== */
+
+html.light,
+html:not(.dark) {
+    color-scheme: light;
+}
+
+html.dark {
+    color-scheme: dark;
+}
+
+/* Public design-system tokens in light mode.
+   Dark values live in the @theme block above; these overrides re-map the same
+   semantic tokens so every `bg-surface`, `text-text-*`, `border-*` and metric
+   utility in the views switches theme without per-element classes. */
+html.light {
+    /* Surfaces: a tinted canvas is what separates white cards from the page.
+       A near-white canvas made the whole page read as one flat white sheet. */
+    --color-surface: #e8eef7;
+    --color-surface-base: #dde6f1;
+    --color-surface-subtle: #ffffff;
+    --color-surface-panel: #ffffff;
+    --color-surface-elevated: #eef3f9;
+
+    /* Borders & text: slate-300/400 borders and slate-700 body copy so every
+       divider and label stays legible without hovering. */
+    --color-border-subtle: #cbd5e1;
+    --color-border-highlight: #94a3b8;
+    --color-text-primary: #0b1220;
+    --color-text-secondary: #1e293b;
+    --color-text-tertiary: #334155;
+    --color-outline: #475569;
+    --color-outline-variant: #cbd5e1;
+
+    /* Brand accents: darkened for WCAG contrast on light surfaces */
+    --color-primary: #0e7490;
+    --color-on-primary: #ffffff;
+    --color-primary-container: #0e7490;
+    --color-on-primary-container: #ffffff;
+    --color-secondary: #047857;
+    --color-on-secondary: #ffffff;
+    --color-secondary-container: #047857;
+    --color-on-secondary-container: #ffffff;
+    --color-tertiary: #4f46e5;
+    --color-on-tertiary: #ffffff;
+    --color-error: #b91c1c;
+    --color-on-error: #ffffff;
+
+    /* Metric accents: one distinct hue per metric so table columns scan fast */
+    --color-metric-speed: #0369a1;
+    --color-metric-efficiency: #047857;
+    --color-metric-cost: #b45309;
+    --color-metric-latency: #be185d;
+}
+
+/* Subtle dotted grid in the public hero is tuned for dark; re-tint it so it
+   stays visible but soft on light backgrounds. */
+html.light .hero-dot-grid {
+    background-image: radial-gradient(circle at 1px 1px, #0e7490 1px, transparent 0) !important;
+    opacity: 0.1 !important;
+}
+
+/* Theme toggle icons. The Google Material Symbols stylesheet is unlayered and
+   sets `display: inline-block`, which wins over Tailwind's layered utilities,
+   so the swap is handled here instead of with `hidden`/`dark:inline`. */
+[data-theme-toggle] .theme-icon-light {
+    display: inline;
+}
+
+[data-theme-toggle] .theme-icon-dark {
+    display: none;
+}
+
+html.dark [data-theme-toggle] .theme-icon-light {
+    display: none;
+}
+
+html.dark [data-theme-toggle] .theme-icon-dark {
+    display: inline;
+}
+
+/* Light Mode Body & Canvas */
+html:not(.dark) body {
+    background-color: #e8eef7 !important;
+    color: #1e293b !important;
+}
+
+/* Glass Surfaces in Light Mode */
+html:not(.dark) .glass-card {
+    background: rgba(255, 255, 255, 0.94) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(226, 232, 240, 0.95) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.02) !important;
+}
+
+html:not(.dark) .glass-header {
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.95) !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03) !important;
+}
+
+html:not(.dark) .glass-sidebar {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-right: 1px solid rgba(226, 232, 240, 0.95) !important;
+    box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Light Mode Headings & Titles */
+html:not(.dark) h1:not([class*="text-indigo"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]),
+html:not(.dark) h2:not([class*="text-indigo"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]),
+html:not(.dark) h3:not([class*="text-indigo"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]),
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6 {
+    color: #0f172a !important;
+}
+
+/* In light mode, text-white becomes dark text by default (for headings, table names, button labels) */
+html:not(.dark) .text-white {
+    color: #0f172a !important;
+}
+
+/* Primary filled action buttons and colored badges keep crisp white text in light mode */
+html:not(.dark) button.bg-indigo-600,
+html:not(.dark) button.bg-indigo-600 *,
+html:not(.dark) a.bg-indigo-600,
+html:not(.dark) a.bg-indigo-600 *,
+html:not(.dark) button[class*="bg-indigo-6"],
+html:not(.dark) button[class*="bg-indigo-6"] *,
+html:not(.dark) button[class*="bg-violet-6"],
+html:not(.dark) button[class*="bg-violet-6"] *,
+html:not(.dark) button[class*="bg-emerald-6"],
+html:not(.dark) button[class*="bg-emerald-6"] *,
+html:not(.dark) button[class*="bg-emerald-5"],
+html:not(.dark) button[class*="bg-emerald-5"] *,
+html:not(.dark) button[class*="bg-rose-6"],
+html:not(.dark) button[class*="bg-rose-6"] *,
+html:not(.dark) button[class*="bg-rose-5"],
+html:not(.dark) button[class*="bg-rose-5"] *,
+html:not(.dark) button.bg-gradient-to-r,
+html:not(.dark) button.bg-gradient-to-r *,
+html:not(.dark) a.bg-gradient-to-r,
+html:not(.dark) a.bg-gradient-to-r *,
+html:not(.dark) button[type="submit"].bg-indigo-600,
+html:not(.dark) button[type="submit"].bg-indigo-600 * {
+    color: #ffffff !important;
+}
+
+/* Explicit Black Text & Icon Guarantees */
+.text-black,
+.text-black *,
+button.text-black,
+button.text-black *,
+a.text-black,
+a.text-black * {
+    color: #000000 !important;
+}
+
+/* Light Mode Typography Nuances */
+html:not(.dark) .text-slate-100 {
+    color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-200 {
+    color: #1e293b !important;
+}
+
+html:not(.dark) .text-slate-300 {
+    color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-400 {
+    color: #475569 !important;
+}
+
+html:not(.dark) .text-slate-500 {
+    color: #64748b !important;
+}
+
+/* Slate Containers & Cards in Light Mode */
+html:not(.dark) div.bg-slate-900,
+html:not(.dark) div[class*="bg-slate-900/"],
+html:not(.dark) div[class*="bg-slate-950/"]:not(.fixed),
+html:not(.dark) aside div.bg-slate-900\/40,
+html:not(.dark) div[class*="bg-slate-950"].overflow-y-auto {
+    background-color: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+}
+
+/* Nested cards inside glass-card get clean pure white */
+html:not(.dark) .glass-card div.bg-slate-900,
+html:not(.dark) .glass-card div[class*="bg-slate-900/"],
+html:not(.dark) .glass-card div[class*="bg-slate-950/"] {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+}
+
+/* Form Controls (Inputs, Selects, Textareas) */
+html:not(.dark) input[type="text"],
+html:not(.dark) input[type="email"],
+html:not(.dark) input[type="password"],
+html:not(.dark) input[type="number"],
+html:not(.dark) select,
+html:not(.dark) textarea {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+html:not(.dark) input:focus,
+html:not(.dark) select:focus,
+html:not(.dark) textarea:focus {
+    border-color: #6366f1 !important;
+    background-color: #ffffff !important;
+}
+
+/* Light Mode Borders & Dividers */
+html:not(.dark) .border-slate-800,
+html:not(.dark) [class*="border-slate-800/"],
+html:not(.dark) .border-slate-700,
+html:not(.dark) [class*="border-slate-700/"] {
+    border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) [class*="divide-slate-800"]> :not([hidden])~ :not([hidden]) {
+    border-color: #e2e8f0 !important;
+}
+
+/* Tables in Light Mode: a tinted, clearly bordered header row plus zebra rows
+   keeps long numeric tables readable instead of dissolving into white. */
+html:not(.dark) table thead tr {
+    background-color: #dfe8f3 !important;
+    border-top: 1px solid #b6c4d4 !important;
+    border-bottom: 1px solid #94a3b8 !important;
+}
+
+html:not(.dark) table thead th {
+    color: #0b1220 !important;
+}
+
+html:not(.dark) table tbody tr:hover {
+    background-color: #dfeaf8 !important;
+}
+
+html:not(.dark) #table-view-container tbody tr {
+    border-bottom-color: #d3dde9 !important;
+}
+
+html:not(.dark) #table-view-container tbody tr:nth-child(even) {
+    background-color: #f4f8fc !important;
+}
+
+html:not(.dark) #table-view-container tbody tr:hover {
+    background-color: #dfeaf8 !important;
+}
+
+/* Rank column pill: a small colored chip anchors the start of each row. */
+html:not(.dark) .rank-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.4rem;
+    padding: 0.05rem 0.35rem;
+    border-radius: 0.5rem;
+    background-color: #e0f2fe;
+    border: 1px solid #bae6fd;
+    color: #075985 !important;
+}
+
+/* Sidebar Navigation */
+html:not(.dark) aside nav a:not([class*="bg-indigo-600/20"]) {
+    color: #475569 !important;
+}
+
+html:not(.dark) aside nav a:not([class*="bg-indigo-600/20"]):hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+html:not(.dark) aside nav a[class*="bg-indigo-600/20"] {
+    background-color: #eef2ff !important;
+    color: #4338ca !important;
+    border-color: #c7d2fe !important;
+    box-shadow: 0 1px 2px 0 rgba(99, 102, 241, 0.08) !important;
+}
+
+html:not(.dark) aside nav a[class*="bg-indigo-600/20"] svg {
+    color: #4f46e5 !important;
+}
+
+/* Sidebar Counter Badges */
+html:not(.dark) aside nav span.bg-slate-800 {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    border-color: #e2e8f0 !important;
+}
+
+/* User Footer in Sidebar */
+html:not(.dark) aside>div.border-t {
+    background-color: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+}
+
+/* Secondary Action Buttons */
+html:not(.dark) button.bg-slate-900,
+html:not(.dark) a.bg-slate-900,
+html:not(.dark) button.bg-slate-800,
+html:not(.dark) a.bg-slate-800,
+html:not(.dark) button[class*="bg-slate-800"],
+html:not(.dark) button[class*="bg-slate-900"] {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #1e293b !important;
+}
+
+html:not(.dark) button.bg-slate-900:hover,
+html:not(.dark) a.bg-slate-900:hover,
+html:not(.dark) button.bg-slate-800:hover,
+html:not(.dark) a.bg-slate-800:hover,
+html:not(.dark) button[class*="bg-slate-800"]:hover,
+html:not(.dark) button[class*="bg-slate-900"]:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    border-color: #94a3b8 !important;
+}
+
+/* Status Badges & Pills */
+html:not(.dark) [class*="bg-emerald-950"] {
+    background-color: #ecfdf5 !important;
+    color: #047857 !important;
+    border-color: #a7f3d0 !important;
+}
+
+html:not(.dark) [class*="bg-rose-950"] {
+    background-color: #fff1f2 !important;
+    color: #be123c !important;
+    border-color: #fecdd3 !important;
+}
+
+html:not(.dark) [class*="bg-amber-950"] {
+    background-color: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fde68a !important;
+}
+
+html:not(.dark) [class*="bg-sky-950"] {
+    background-color: #f0f9ff !important;
+    color: #0369a1 !important;
+    border-color: #bae6fd !important;
+}
+
+html:not(.dark) [class*="bg-indigo-950"] {
+    background-color: #eef2ff !important;
+    color: #4338ca !important;
+    border-color: #c7d2fe !important;
+}
+
+/* Neutral Slate Badges */
+html:not(.dark) span.bg-slate-800,
+html:not(.dark) span.bg-slate-900,
+html:not(.dark) span[class*="bg-slate-800"],
+html:not(.dark) span[class*="bg-slate-900"] {
+    background-color: #f1f5f9 !important;
+    color: #334155 !important;
+    border-color: #e2e8f0 !important;
+}
+
+/* Modal and Drawer Backdrop Overlays */
+html:not(.dark) .fixed.inset-0.bg-slate-950\/80,
+html:not(.dark) .fixed.inset-0.bg-slate-950\/60 {
+    background-color: rgba(15, 23, 42, 0.45) !important;
+}
+
+/* Slide-over Drawer Panels in Light Mode */
+html:not(.dark) .fixed.inset-y-0.right-0.bg-slate-950 {
+    background-color: #ffffff !important;
+    border-left-color: #e2e8f0 !important;
+    box-shadow: -8px 0 24px -4px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Drawer Tab Navigation in Light Mode */
+html:not(.dark) button[class*="text-slate-400"].hover\:bg-slate-900:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+/* Code Blocks in Light Mode */
+html:not(.dark) pre:not([class*="bg-slate-9"]):not([class*="bg-slate-950"]):not([style*="background-color: #020617"]):not([style*="background-color:#020617"]),
+html:not(.dark) code:not([class*="bg-slate-9"]):not([class*="bg-slate-950"]):not([style*="background-color: #020617"]):not([style*="background-color:#020617"]) {
+    color: #0f172a;
+}
+
+/* Ensure dark terminal, console and payload inspector blocks maintain readable high-contrast text in all themes */
+pre[class*="bg-slate-950"],
+pre[class*="bg-slate-900"],
+code[class*="bg-slate-950"],
+code[class*="bg-slate-900"] {
+    color: #e2e8f0;
+}
+
+html:not(.dark) #raw-json-code {
+    color: #047857 !important;
+}
+
+/* Scrollbars */
+.dark ::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.6);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: rgba(51, 65, 85, 0.8);
+    border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.8);
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ==========================================================================
+   LIGHT MODE DEPTH & COLOR
+   The light theme paints a tinted canvas and lifts white cards on top of it,
+   then adds a colored accent per metric. Scoped to light mode only.
+   ========================================================================== */
+
+/* Hero: soft brand wash (teal + indigo) instead of a flat white block. */
+html:not(.dark) .hero-section {
+    background-image:
+        radial-gradient(760px 380px at 88% -12%, rgba(14, 116, 144, 0.2), transparent 68%),
+        radial-gradient(620px 320px at 4% -6%, rgba(79, 70, 229, 0.14), transparent 70%),
+        linear-gradient(180deg, #ffffff 0%, #f2f7fc 54%, #e6eef7 100%) !important;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+/* Cards read as separate objects: visible border + soft directional shadow. */
+html:not(.dark) .bg-surface-subtle.rounded-xl,
+html:not(.dark) .bg-surface-panel.rounded-xl,
+html:not(.dark) #table-view-container {
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 14px 30px -22px rgba(15, 23, 42, 0.45);
+}
+
+/* Nested panels get a tinted fill so they do not vanish inside a white card. */
+html:not(.dark) .bg-surface-subtle .bg-surface-panel,
+html:not(.dark) .bg-surface-subtle [class*="bg-surface-panel/"] {
+    background-color: #f4f8fc !important;
+    border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) [class*="bg-surface-panel/60"] {
+    background-color: #f4f8fc !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* Header bars. */
+html:not(.dark) header.fixed {
+    box-shadow: 0 1px 0 #cbd5e1, 0 18px 30px -26px rgba(15, 23, 42, 0.6);
+}
+
+html:not(.dark) .public-substrip {
+    background-color: #e3ebf5 !important;
+    border-top-color: #cbd5e1 !important;
+}
+
+/* Top telemetry ticker: dark navy band gives the light page a clear anchor. */
+html:not(.dark) .public-ticker {
+    background-color: #0b1220 !important;
+    border-bottom-color: #1e293b !important;
+}
+
+html:not(.dark) .public-ticker .text-text-primary,
+html:not(.dark) .public-ticker .text-text-secondary {
+    color: #e2e8f0 !important;
+}
+
+html:not(.dark) .public-ticker .text-text-tertiary {
+    color: #94a3b8 !important;
+}
+
+html:not(.dark) .public-ticker .text-metric-efficiency {
+    color: #4ade80 !important;
+}
+
+html:not(.dark) .public-ticker .text-metric-speed {
+    color: #38bdf8 !important;
+}
+
+html:not(.dark) .public-ticker .bg-border-subtle {
+    background-color: #334155 !important;
+}
+
+/* Footer: matching dark band so the page is framed top and bottom. */
+html:not(.dark) .public-footer {
+    background-color: #0b1220 !important;
+    border-top-color: #1e293b !important;
+}
+
+html:not(.dark) .public-footer .text-text-primary {
+    color: #f8fafc !important;
+}
+
+html:not(.dark) .public-footer .text-text-secondary {
+    color: #cbd5e1 !important;
+}
+
+html:not(.dark) .public-footer .text-text-tertiary {
+    color: #94a3b8 !important;
+}
+
+html:not(.dark) .public-footer .text-metric-efficiency {
+    color: #4ade80 !important;
+}
+
+html:not(.dark) .public-footer .border-border-subtle {
+    border-color: #1e293b !important;
+}
+
+html:not(.dark) .public-footer .bg-border-subtle {
+    background-color: #334155 !important;
+}
+
+html:not(.dark) .public-footer a:hover {
+    color: #5eead4 !important;
+}
+
+/* Metric accent cards: a colored top rule plus a faint matching wash. */
+html:not(.dark) .accent-card--efficiency {
+    background-image: linear-gradient(180deg, #ecfdf5 0%, #ffffff 46%) !important;
+    box-shadow: inset 0 3px 0 0 #047857, 0 14px 30px -24px rgba(15, 23, 42, 0.5);
+}
+
+html:not(.dark) .accent-card--speed {
+    background-image: linear-gradient(180deg, #eef7fe 0%, #ffffff 46%) !important;
+    box-shadow: inset 0 3px 0 0 #0369a1, 0 14px 30px -24px rgba(15, 23, 42, 0.5);
+}
+
+html:not(.dark) .accent-card--cost {
+    background-image: linear-gradient(180deg, #fff8e8 0%, #ffffff 46%) !important;
+    box-shadow: inset 0 3px 0 0 #b45309, 0 14px 30px -24px rgba(15, 23, 42, 0.5);
+}
+
+/* Methodology cards: the 01/02/03 numerals set the accent color. */
+html:not(.dark) #methodology .grid>div:nth-child(1) {
+    box-shadow: inset 0 3px 0 0 #0e7490, 0 14px 30px -24px rgba(15, 23, 42, 0.45);
+}
+
+html:not(.dark) #methodology .grid>div:nth-child(2) {
+    box-shadow: inset 0 3px 0 0 #047857, 0 14px 30px -24px rgba(15, 23, 42, 0.45);
+}
+
+html:not(.dark) #methodology .grid>div:nth-child(3) {
+    box-shadow: inset 0 3px 0 0 #4f46e5, 0 14px 30px -24px rgba(15, 23, 42, 0.45);
+}
+
+/* Small tinted pills. */
+html:not(.dark) .soft-badge {
+    background-color: #e6f6fb !important;
+    border-color: #9fd3e3 !important;
+}
